@@ -1,32 +1,34 @@
 import Animals.Animal;
-import Animals.Cat;
-import Animals.Dog;
 import Animals.Gender;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.ResourceBundle;
 
 public class FXController implements Initializable {
 
-    public ComboBox cbSpecies;
+    @FXML
+    private ComboBox cbSpecies;
     public RadioButton rbFemale;
-    public RadioButton rbMale;
-    public TextField tbName;
+    @FXML
+    private RadioButton rbMale;
+    @FXML
+    private TextField tbName;
     public TextField tbBadHabits;
     public Button btnAddAnimal;
-    public ListView lvAnimals;
+    @FXML
+    private ListView lvAnimals;
     public TextField tbReservorName;
-    public Button btnReserveAnimal;
+    @FXML
+    private Button btnReserveAnimal;
 
     //private List<Animal> animals = new ArrayList<Animal>();
-    Reservation reservation = new Reservation();
+    private final Reservation reservation = new Reservation();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -43,6 +45,13 @@ public class FXController implements Initializable {
         else{
             reservation.NewDog(tbName.getText(), gender);
         }
+        UpdateList();
+    }
+
+    public void ReserveAnimal(ActionEvent actionEvent) {
+        int index = lvAnimals.getSelectionModel().getSelectedIndex();
+        Animal animal = reservation.GetAnimals().get(index);
+        animal.Reserve(tbName.getText());
         UpdateList();
     }
 

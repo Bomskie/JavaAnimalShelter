@@ -6,10 +6,10 @@ import Animals.Gender;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Reservation {
-    private List<Animal> animals;
+class Reservation {
+    private final List<Animal> animals;
 
-    public Reservation(){animals = new ArrayList<Animal>();}
+    public Reservation(){animals = new ArrayList<>();}
 
     public List<Animal> GetAnimals(){return animals;}
 

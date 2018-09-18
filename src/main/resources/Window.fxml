@@ -26,6 +26,6 @@
       <Button fx:id="btnAddAnimal" layoutX="50.0" layoutY="217.0" mnemonicParsing="false" onAction="#AddAnimal" text="Add animal" />
       <ListView fx:id="lvAnimals" layoutX="238.0" layoutY="12.0" prefHeight="187.0" prefWidth="276.0" />
       <TextField fx:id="tbReservorName" layoutX="238.0" layoutY="217.0" />
-      <Button fx:id="btnReserveAnimal" layoutX="409.0" layoutY="217.0" mnemonicParsing="false" text="Reserve" />
+      <Button fx:id="btnReserveAnimal" layoutX="409.0" layoutY="217.0" mnemonicParsing="false" onAction="#ReserveAnimal" text="Reserve" />
    </children>
 </AnchorPane>

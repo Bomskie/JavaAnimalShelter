@@ -1,7 +1,6 @@
 package Animals;
 
 import java.time.LocalDateTime;
-import java.util.Date;
 
 public class Dog extends Animal {
 

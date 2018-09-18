@@ -10,7 +10,7 @@ import java.util.List;
 
 public class Main extends Application {
 
- List<Animal> animals = new ArrayList<Animal>();
+ List<Animal> animals = new ArrayList<>();
 
 
  /*
