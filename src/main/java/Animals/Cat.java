@@ -5,8 +5,10 @@ public class Cat extends Animal {
         super(name, gender);
     }
 
+
     @Override
-    public  String ToString(){
-        return super.ToString() + super.name + " ik ben een kat";
+    public  String toString(){
+        //return super.ToString() + super.name + " ik ben een kat";
+        return super.toString() + " no bad habits";
     }
 }

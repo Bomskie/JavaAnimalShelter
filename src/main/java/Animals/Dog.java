@@ -1,5 +1,6 @@
 package Animals;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 public class Dog extends Animal {
@@ -18,8 +19,10 @@ public class Dog extends Animal {
         }
     }
     */
+
     @Override
-    public  String ToString(){
-        return super.ToString() + super.name + " ik ben een hond";
+    public  String toString(){
+        //return super.ToString() + super.name + " ik ben een hond";
+        return super.toString() + " last walk " + LocalDateTime.now();
     }
 }
